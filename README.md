@@ -1,6 +1,6 @@
 # flutter_clean_architecture
 
-A new Flutter project.
+A TODO app project for flutter clean architecture with Riverpod.
 
 ## Getting Started
 
