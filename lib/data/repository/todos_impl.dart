@@ -1,10 +1,10 @@
 import 'dart:convert';
 
-import 'package:flutter_clean_architecture/domain/model/todo.dart';
-import 'package:flutter_clean_architecture/domain/repository/todos.dart';
 import 'package:collection/collection.dart';
 
+import '../../domain/model/todo.dart';
 import '../../domain/model/todos.dart';
+import '../../domain/repository/todos.dart';
 import '../source/files.dart';
 
 class TodosRepositoryImpl extends TodosRepository {
@@ -30,7 +30,7 @@ class TodosRepositoryImpl extends TodosRepository {
   }
 
   @override
-  Future<Todo?> getTodoById(int id) async {
+  Future<Todo?> getTodoById(String id) async {
     final todos = await loadTodos();
 
     // Find the todo by id

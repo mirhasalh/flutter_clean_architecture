@@ -11,5 +11,5 @@ abstract class TodosRepository {
 
   Future<void> deleteAllTodos();
 
-  Future<Todo?> getTodoById(int id);
+  Future<Todo?> getTodoById(String id);
 }

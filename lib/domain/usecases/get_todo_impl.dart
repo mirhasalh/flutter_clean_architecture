@@ -8,5 +8,5 @@ class GetTodoUseCaseImpl extends GetTodoUseCase {
   final TodosRepository todosRepository;
 
   @override
-  Future<Todo?> execute(int id) async => todosRepository.getTodoById(id);
+  Future<Todo?> execute(String id) async => todosRepository.getTodoById(id);
 }

@@ -20,7 +20,7 @@ Todo _$TodoFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Todo {
-  int get id => throw _privateConstructorUsedError;
+  String get id => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
   String? get desc => throw _privateConstructorUsedError;
   bool get completed => throw _privateConstructorUsedError;
@@ -35,7 +35,7 @@ abstract class $TodoCopyWith<$Res> {
   factory $TodoCopyWith(Todo value, $Res Function(Todo) then) =
       _$TodoCopyWithImpl<$Res, Todo>;
   @useResult
-  $Res call({int id, String title, String? desc, bool completed});
+  $Res call({String id, String title, String? desc, bool completed});
 }
 
 /// @nodoc
@@ -60,7 +60,7 @@ class _$TodoCopyWithImpl<$Res, $Val extends Todo>
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -83,7 +83,7 @@ abstract class _$$_TodoCopyWith<$Res> implements $TodoCopyWith<$Res> {
       __$$_TodoCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int id, String title, String? desc, bool completed});
+  $Res call({String id, String title, String? desc, bool completed});
 }
 
 /// @nodoc
@@ -104,7 +104,7 @@ class __$$_TodoCopyWithImpl<$Res> extends _$TodoCopyWithImpl<$Res, _$_Todo>
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -133,7 +133,7 @@ class _$_Todo implements _Todo {
   factory _$_Todo.fromJson(Map<String, dynamic> json) => _$$_TodoFromJson(json);
 
   @override
-  final int id;
+  final String id;
   @override
   final String title;
   @override
@@ -179,7 +179,7 @@ class _$_Todo implements _Todo {
 
 abstract class _Todo implements Todo {
   const factory _Todo(
-      {required final int id,
+      {required final String id,
       required final String title,
       final String? desc,
       final bool completed}) = _$_Todo;
@@ -187,7 +187,7 @@ abstract class _Todo implements Todo {
   factory _Todo.fromJson(Map<String, dynamic> json) = _$_Todo.fromJson;
 
   @override
-  int get id;
+  String get id;
   @override
   String get title;
   @override

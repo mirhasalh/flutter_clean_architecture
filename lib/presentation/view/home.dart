@@ -8,24 +8,19 @@ class Home extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final todos = ref.watch(todosListState);
     return Scaffold(
       appBar: AppBar(
         title: const Text('TODO App Demo'),
       ),
-      body: ref.watch(getTodosProvider).map(
-            data: (todos) => ListView.separated(
-              itemBuilder: (context, index) {
-                var title = todos.value.values[index].title;
-                return ListTile(title: Text(title));
-              },
-              separatorBuilder: (context, index) => const Divider(height: 0.0),
-              itemCount: todos.value.values.length,
-            ),
-            error: (error) => Center(
-              child: Text('${error.stackTrace}'),
-            ),
-            loading: (_) => const Center(child: CircularProgressIndicator()),
-          ),
+      body: ListView.separated(
+        itemBuilder: (context, index) {
+          var title = todos.values[index].title;
+          return ListTile(title: Text(title));
+        },
+        separatorBuilder: (context, index) => const Divider(height: 0.0),
+        itemCount: todos.values.length,
+      ),
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () => context.go('/add'),
         label: const Text('Add TODO'),

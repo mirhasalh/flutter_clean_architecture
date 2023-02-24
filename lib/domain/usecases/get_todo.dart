@@ -1,5 +1,5 @@
 import '../model/todo.dart';
 
 abstract class GetTodoUseCase {
-  Future<Todo?> execute(int id);
+  Future<Todo?> execute(String id);
 }

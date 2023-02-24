@@ -29,13 +29,13 @@ class _SystemHash {
   }
 }
 
-String _$getTodosHash() => r'a579d9b254bc908fad7a7cedb81475459367f1c1';
+String _$todosListHash() => r'a311984d4a839307c7f8c70e6f4c540bd4902f76';
 
-/// See also [getTodos].
-final getTodosProvider = AutoDisposeFutureProvider<Todos>(
-  getTodos,
-  name: r'getTodosProvider',
+/// See also [todosList].
+final todosListProvider = AutoDisposeFutureProvider<Todos>(
+  todosList,
+  name: r'todosListProvider',
   debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : _$getTodosHash,
+      const bool.fromEnvironment('dart.vm.product') ? null : _$todosListHash,
 );
-typedef GetTodosRef = AutoDisposeFutureProviderRef<Todos>;
+typedef TodosListRef = AutoDisposeFutureProviderRef<Todos>;
