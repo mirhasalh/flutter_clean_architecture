@@ -3,7 +3,7 @@
 A TODO app project for flutter clean architecture with Riverpod.
 
 ## Installation
-```
+```bash
 # Get dependencies
 $ flutter pub get
 
@@ -13,7 +13,7 @@ $ flutter run
 
 ## Run scripts
 
-```
+```bash
 flutter_scripts
 ```
 Read about [flutter_scripts](https://pub.dev/packages/flutter_scripts) to prompt the cli command.
